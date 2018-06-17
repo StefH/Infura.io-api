@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 
 namespace Infura.io.Models
 {
+    /// <summary>
+    /// Full ticker response
+    /// </summary>
     public class TickerFullResponse
     {
         /// <summary>

@@ -1,22 +1,19 @@
-﻿// using System.Runtime.Serialization;
-
-namespace Infura.io.Enums
+﻿namespace Infura.io.Enums
 {
     /// <summary>
-    /// Ethereum network
+    /// Ethereum network (in lowercase)
     /// </summary>
-    public enum EthereumNetworkType
+    public struct EthereumNetworkType
     {
-        // [EnumMember(Value = "mainnet")]
-        mainnet,
+        private readonly string _value;
 
-        // [EnumMember(Value = "ropsten")]
-        ropsten,
+        private EthereumNetworkType(string value) => _value = value;
 
-        // [EnumMember(Value = "kovan")]
-        kovan,
+        public override string ToString() => _value;
 
-        // [EnumMember(Value = "rinkeby")]
-        rinkeby
+        public static EthereumNetworkType Mainnet { get; } = new EthereumNetworkType("mainnet");
+        public static EthereumNetworkType Ropsten { get; } = new EthereumNetworkType("ropsten");
+        public static EthereumNetworkType Kovan { get; } = new EthereumNetworkType("kovan");
+        public static EthereumNetworkType Rinkeby { get; } = new EthereumNetworkType("rinkeby");
     }
 }

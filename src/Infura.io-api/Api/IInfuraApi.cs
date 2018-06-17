@@ -5,7 +5,7 @@ namespace Infura.io.Api
     /// <summary>
     /// See https://infura.docs.apiary.io/api-description-document
     /// </summary>
-    public interface IInfuraApi : IInfuraJSONRPCApi, IInfuraTickerApi
+    public interface IInfuraApi : IInfuraJSONRPCApi, IInfuraTickerApi, IInfuraBlacklistApi
     {
         /// <summary>
         /// The infura.io endpoint.

@@ -13,6 +13,10 @@ The following **ticker** calls are implemented:
 - GET `/v1/ticker/{symbol}`
 - GET `/v1/ticker/{symbol}/full`
 
+The following **blacklist** calls are implemented:
+- GET `/v1/blacklist`
+- GET `/v2/blacklist`
+
 ### NuGet
 
 | Name | NuGet |

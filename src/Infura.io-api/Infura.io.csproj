@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Infura.io API</Description>
+    <Version>1.0.0-preview-01</Version>
+    <Authors>Stef Heyenrath</Authors>
+    <TargetFrameworks>net45;net46;netstandard1.1;netstandard2.0</TargetFrameworks>
+    <PackageId>Infura.io-api</PackageId>
+    <PackageTags>infura;infura.io;api;blockchain;dapp;ethereum;blockapps;client;restease</PackageTags>
+    <PackageReleaseNotes>See CHANGELOG.md</PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/stefh/infura.io-api/master/resources/infura.io_150x150.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/stefh/infura.io-api</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/stefh/infura.io-client/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/stefh/infura.io-api</RepositoryUrl>
+    <ApplicationIcon>..\..\resources\infura.io.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RestEase" Version="1.4.5" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>

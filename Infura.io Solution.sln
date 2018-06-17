@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB7C07ED-92DB-4D55-A618-54E15AB3E3FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{3877907E-3C7F-4AE0-BF17-5A0B279E1D0D}"
+	ProjectSection(SolutionItems) = preProject
+		api\infura.yaml = api\infura.yaml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{4C094643-C379-47FD-8090-D4B05408D4FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9100E648-BF54-4C4C-BA01-2CE58CFC86DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infura.io", "src\Infura.io-api\Infura.io.csproj", "{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDemo", "examples\ConsoleAppDemo\ConsoleAppDemo.csproj", "{A334A49D-3934-4116-A6BC-D6228F415C4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A334A49D-3934-4116-A6BC-D6228F415C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A334A49D-3934-4116-A6BC-D6228F415C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A334A49D-3934-4116-A6BC-D6228F415C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A334A49D-3934-4116-A6BC-D6228F415C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E8E15C50-90A7-4389-9C8E-5EC2D80FFACE} = {BB7C07ED-92DB-4D55-A618-54E15AB3E3FA}
+		{A334A49D-3934-4116-A6BC-D6228F415C4C} = {4C094643-C379-47FD-8090-D4B05408D4FA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A059C177-D7B0-44A4-A6A8-FC9A0337BE77}
+	EndGlobalSection
+EndGlobal

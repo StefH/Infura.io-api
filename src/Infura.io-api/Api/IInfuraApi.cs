@@ -1,4 +1,5 @@
-﻿using RestEase;
+﻿using JetBrains.Annotations;
+using RestEase;
 
 namespace Infura.io.Api
 {
@@ -11,6 +12,7 @@ namespace Infura.io.Api
         /// The infura.io endpoint.
         /// </summary>
         [Path("endpoint", UrlEncode = false)]
+        [PublicAPI]
         string Endpoint { get; set; }
     }
 }

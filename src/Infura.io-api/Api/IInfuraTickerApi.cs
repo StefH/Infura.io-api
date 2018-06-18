@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Infura.io.Models;
+using JetBrains.Annotations;
 using RestEase;
 
 namespace Infura.io.Api
@@ -11,6 +12,7 @@ namespace Infura.io.Api
         /// </summary>
         /// <returns><see cref="SymbolsResponse"/></returns>
         [Get("{endpoint}/v1/ticker/symbols")]
+        [PublicAPI]
         Task<SymbolsResponse> GetSymbolsAsync();
 
         /// <summary>
@@ -20,6 +22,7 @@ namespace Infura.io.Api
         /// <param name="symbol">Ticker symbol (currency pair).</param>
         /// <returns><see cref="TickerResponse"/></returns>
         [Get("{endpoint}/v1/ticker/{symbol}")]
+        [PublicAPI]
         Task<TickerResponse> GetSymbolAsync([Path] string symbol);
 
         /// <summary>
@@ -29,6 +32,7 @@ namespace Infura.io.Api
         /// <param name="symbol">Ticker symbol (currency pair).</param>
         /// <returns><see cref="TickerResponse"/></returns>
         [Get("{endpoint}/v1/ticker/{symbol}/full")]
+        [PublicAPI]
         Task<TickerFullResponse> GetSymbolsFullAsync([Path] string symbol);
     }
 }

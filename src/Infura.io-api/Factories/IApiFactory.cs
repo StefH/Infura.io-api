@@ -1,10 +1,12 @@
 ﻿using Infura.io.Api;
+using JetBrains.Annotations;
 
 namespace Infura.io.Factories
 {
     /// <summary>
     /// A factory to create the Infura API.
     /// </summary>
+    [PublicAPI]
     public interface IApiFactory
     {
         /// <summary>

@@ -2,7 +2,9 @@ using Newtonsoft.Json;
 
 namespace Infura.io.Models
 {
-    // ReSharper disable once InconsistentNaming
+    /// <summary>
+    /// JSON-RPC response
+    /// </summary>
     public class JSONRPCResponse
     {
         /// <summary>
@@ -25,5 +27,12 @@ namespace Infura.io.Models
         /// <value>JSON-RPC result (can also be an object)</value>
         [JsonProperty(PropertyName = "result")]
         public string Result { get; set; }
+
+        /// <summary>
+        /// JSON-RPC error object
+        /// </summary>
+        /// <value>The error</value>
+        [JsonProperty(PropertyName = "error")]
+        public JSONRPCError Error { get; set; }
     }
 }

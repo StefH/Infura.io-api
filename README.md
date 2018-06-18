@@ -1,12 +1,12 @@
-# Infura.io API
-Infura.io C# API which uses [RestEase](https://github.com/canton7/RestEase) to generate an API interface for [Infura API](https://infura.docs.apiary.io/api-description-document)
+# ![Project Icon](resources\infura.io_32x32.png) Infura.io API
+Infura.io C# API which uses [RestEase](https://github.com/canton7/RestEase) to generate an API interface for the [Infura API](https://infura.docs.apiary.io/api-description-document).
 
 ### Methods
 
 The following **jsonrpc** calls are implemented:
 - GET `/v1/jsonrpc/{network}/methods`
 - GET `/v1/jsonrpc/{network}/{method}`
-- POST `/v1/jsonrpc/{network}` **(TODO !!!)**
+- POST `/v1/jsonrpc/{network}`
 
 The following **ticker** calls are implemented:
 - GET `/v1/ticker/symbols`
@@ -21,7 +21,7 @@ The following **blacklist** calls are implemented:
 
 | Name | NuGet |
 | ---- | ----- |
-| Infura.io-api | [![NuGet Badge](https://buildstats.info/nuget/Infura.Client)](https://www.nuget.org/packages/Infura.io-api) |
+| Infura.io-api | [![NuGet Badge](https://buildstats.info/nuget/Infura.io-api)](https://www.nuget.org/packages/Infura.io-api) |
 
 ### Frameworks
 The following frameworks are supported:
@@ -39,6 +39,8 @@ IApiFactory factory = new ApiFactory();
 var api = factory.Create(endpoint);
 
 var methodsResponse = await api.GetMethodsAsync(EthereumNetworkType.rinkeby);
-Console.WriteLine("GetMethodsAsync=" + JsonConvert.SerializeObject(methodsResponse, Formatting.Indented));
+Console.WriteLine("GetMethodsAsync = " + JsonConvert.SerializeObject(methodsResponse, Formatting.Indented));
 ```
+
+For more examples, see [ConsoleAppDemo/Program.cs](https://github.com/StefH/Infura.io-api/blob/master/examples/ConsoleAppDemo/Program.cs).
 

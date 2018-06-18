@@ -1,9 +1,13 @@
+using Infura.io.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Infura.io.Models
 {
-    // ReSharper disable once InconsistentNaming
-    public abstract class JSONRPCRequest
+    /// <summary>
+    /// Regular JSON-RPC payload (POST body)
+    /// </summary>
+    public class JSONRPCRequest
     {
         /// <summary>
         /// JSON-RPC request ID
@@ -28,7 +32,8 @@ namespace Infura.io.Models
         /// </summary>
         /// <value>Ethereum JSON-RPC method</value>
         [JsonProperty(PropertyName = "method")]
-        public abstract string Method { get; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JSONRPCRequestMethod Method { get; set; }
 
         /// <summary>
         /// JSON-RPC parameters (can be empty)

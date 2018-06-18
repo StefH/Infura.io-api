@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Infura.io.Models;
+using JetBrains.Annotations;
 using RestEase;
 
 namespace Infura.io.Api
@@ -12,6 +13,7 @@ namespace Infura.io.Api
         /// </summary>
         /// <returns>List of blacklisted phishing domains.</returns>
         [Get("{endpoint}/v1/blacklist")]
+        [PublicAPI]
         Task<string[]> GetBlacklistedDomainsAsync();
 
         /// <summary>
@@ -20,6 +22,7 @@ namespace Infura.io.Api
         /// </summary>
         /// <returns></returns>
         [Get("{endpoint}/v2/blacklist")]
+        [PublicAPI]
         Task<BlacklistResponse> GetBlacklistAsync();
     }
 }

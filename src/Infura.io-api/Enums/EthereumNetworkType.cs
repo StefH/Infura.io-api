@@ -1,8 +1,11 @@
-﻿namespace Infura.io.Enums
+﻿using JetBrains.Annotations;
+
+namespace Infura.io.Enums
 {
     /// <summary>
     /// Ethereum network (in lowercase)
     /// </summary>
+    [PublicAPI]
     public struct EthereumNetworkType
     {
         private readonly string _value;

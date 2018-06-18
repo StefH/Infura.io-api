@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Infura.io.Enums;
 using Infura.io.Models;
+using JetBrains.Annotations;
 using RestEase;
 
 namespace Infura.io.Api
@@ -13,6 +14,7 @@ namespace Infura.io.Api
         /// <param name="network">The Ethereum network.</param>
         /// <returns><see cref="MethodsResponse"/></returns>
         [Get("{endpoint}/v1/jsonrpc/{network}/methods")]
+        [PublicAPI]
         Task<MethodsResponse> GetMethodsAsync([Path] EthereumNetworkType network);
 
         /// <summary>
@@ -23,6 +25,7 @@ namespace Infura.io.Api
         /// <param name="method">JSON-RPC method. Use the `/v1/jsonrpc/{network}/methods` endpoint to get the list of permitted methods.</param>
         /// <returns><see cref="JSONRPCResponse"/></returns>
         [Get("{endpoint}/v1/jsonrpc/{network}/{method}")]
+        [PublicAPI]
         Task<JSONRPCResponse> GetMethodAsync([Path] EthereumNetworkType network, [Path] string method);
 
         /// <summary>
@@ -32,6 +35,9 @@ namespace Infura.io.Api
         /// <param name="request">Regular JSON-RPC payload (POST body).</param>
         /// <returns><see cref="JSONRPCResponse"/></returns>
         [Post("{endpoint}/v1/jsonrpc/{network}")]
+        [Header("Content-Type", "application/json")]
+        [Header("Accept", "application/json")]
+        [PublicAPI]
         Task<JSONRPCResponse> PostRequestAsync([Path] EthereumNetworkType network, [Body] JSONRPCRequest request);
     }
 }

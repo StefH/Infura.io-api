@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{3877907E-3C7F-4AE0-BF17-5A0B279E1D0D}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
+		Infura.io Solution.sln.DotSettings = Infura.io Solution.sln.DotSettings
 		api\infura.yaml = api\infura.yaml
 		README.md = README.md
 	EndProjectSection

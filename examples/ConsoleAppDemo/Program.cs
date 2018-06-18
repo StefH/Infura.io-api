@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Infura.io.Api;
 using Infura.io.Enums;
 using Infura.io.Factories;
 using Infura.io.Models;
@@ -20,7 +21,7 @@ namespace ConsoleAppDemo
         {
             IApiFactory factory = new ApiFactory();
 
-            var api = factory.Create(endpoint);
+            IInfuraApi api = factory.Create(endpoint);
 
             var symbolsResponse = await api.GetSymbolsAsync();
             Console.WriteLine("GetSymbolsAsync = " + JsonConvert.SerializeObject(symbolsResponse, Formatting.Indented));
@@ -50,7 +51,7 @@ namespace ConsoleAppDemo
             };
 
             var postResult = await api.PostRequestAsync(EthereumNetworkType.Rinkeby, requestEstimateGas);
-            Console.WriteLine("PostRequestAsync=" + JsonConvert.SerializeObject(postResult, Formatting.Indented));
+            Console.WriteLine("PostRequestAsync = " + JsonConvert.SerializeObject(postResult, Formatting.Indented));
         }
     }
 }

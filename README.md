@@ -1,4 +1,4 @@
-# ![Project Icon](resources\infura.io_32x32.png) Infura.io API
+# ![Project Icon](resources/infura.io_32x32.png) Infura.io API
 Infura.io C# API which uses [RestEase](https://github.com/canton7/RestEase) to generate an API interface for the [Infura API](https://infura.docs.apiary.io/api-description-document).
 
 ### Methods
@@ -36,7 +36,7 @@ The following frameworks are supported:
 ``` c#
 IApiFactory factory = new ApiFactory();
 
-var api = factory.Create(endpoint);
+IInfuraApi api = factory.Create(endpoint);
 
 var methodsResponse = await api.GetMethodsAsync(EthereumNetworkType.rinkeby);
 Console.WriteLine("GetMethodsAsync = " + JsonConvert.SerializeObject(methodsResponse, Formatting.Indented));

@@ -20,7 +20,7 @@ namespace Infura.io.Api
         /// Return a blacklist of phishing sites, as well as a whitelist and a fuzzylist.
         /// This list is maintained by the MetaMask project at https://github.com/MetaMask/eth-phishing-detect/blob/master/src/config.json.
         /// </summary>
-        /// <returns></returns>
+        /// <returns><see cref="BlacklistResponse"/></returns>
         [Get("{endpoint}/v2/blacklist")]
         [PublicAPI]
         Task<BlacklistResponse> GetBlacklistAsync();

@@ -1,4 +1,6 @@
 ﻿using Infura.io.Api;
+using Infura.io.Validation;
+using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RestEase;
@@ -27,14 +29,18 @@ namespace Infura.io.Factories
         /// Initializes a new instance of the <see cref="ApiFactory"/> class.
         /// </summary>
         /// <param name="factory">The HttpClientFactory.</param>
-        public ApiFactory(IHttpClientFactory factory)
+        public ApiFactory([NotNull] IHttpClientFactory factory)
         {
+            Check.NotNull(factory, nameof(factory));
+
             _factory = factory;
         }
 
         /// <seealso cref="IApiFactory.Create"/>
         public IInfuraApi Create(string endpoint)
         {
+            Check.NotNullOrEmpty(endpoint, nameof(endpoint));
+
             var api = new RestClient(_factory.GetHttpClient())
             {
                 JsonSerializerSettings = _serializerSettings

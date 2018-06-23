@@ -26,7 +26,7 @@ namespace Infura.io.Api
         /// <returns><see cref="JSONRPCResponse"/></returns>
         [Get("{endpoint}/v1/jsonrpc/{network}/{method}")]
         [PublicAPI]
-        Task<JSONRPCResponse> GetMethodAsync([Path] EthereumNetworkType network, [Path] string method);
+        Task<JSONRPCResponse> GetMethodAsync([Path] EthereumNetworkType network, [NotNull, Path] string method);
 
         /// <summary>
         /// A request using an "HTTP POST-compatible" (state-changing) JSON-RPC method.

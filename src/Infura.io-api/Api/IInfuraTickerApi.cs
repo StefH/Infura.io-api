@@ -23,7 +23,7 @@ namespace Infura.io.Api
         /// <returns><see cref="TickerResponse"/></returns>
         [Get("{endpoint}/v1/ticker/{symbol}")]
         [PublicAPI]
-        Task<TickerResponse> GetSymbolAsync([Path] string symbol);
+        Task<TickerResponse> GetSymbolAsync([NotNull, Path] string symbol);
 
         /// <summary>
         /// Get pricing (ticker) data for various currency pairs (fiat, crypto, and tokens) using data from several exchanges.
@@ -33,6 +33,6 @@ namespace Infura.io.Api
         /// <returns><see cref="TickerResponse"/></returns>
         [Get("{endpoint}/v1/ticker/{symbol}/full")]
         [PublicAPI]
-        Task<TickerFullResponse> GetSymbolsFullAsync([Path] string symbol);
+        Task<TickerFullResponse> GetSymbolsFullAsync([NotNull, Path] string symbol);
     }
 }

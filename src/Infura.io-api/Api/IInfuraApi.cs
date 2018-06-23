@@ -13,6 +13,7 @@ namespace Infura.io.Api
         /// </summary>
         [Path("endpoint", UrlEncode = false)]
         [PublicAPI]
+        [NotNull]
         string Endpoint { get; set; }
     }
 }

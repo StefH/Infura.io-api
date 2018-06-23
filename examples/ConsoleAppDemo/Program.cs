@@ -47,7 +47,7 @@ namespace ConsoleAppDemo
             var requestEstimateGas = new JSONRPCRequest
             {
                 Id = 42,
-                Method = JSONRPCRequestMethod.EstimateGas
+                Method = JSONRPCPostMethod.EstimateGas
             };
 
             var postResult = await api.PostRequestAsync(EthereumNetworkType.Rinkeby, requestEstimateGas);

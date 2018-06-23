@@ -4,10 +4,10 @@ using JetBrains.Annotations;
 namespace Infura.io.Enums
 {
     /// <summary>
-    /// Ethereum JSON-RPC method
+    /// Ethereum JSON-RPC POST method
     /// </summary>
     [PublicAPI]
-    public enum JSONRPCRequestMethod
+    public enum JSONRPCPostMethod
     {
         [EnumMember(Value = "eth_estimateGas")]
         EstimateGas,

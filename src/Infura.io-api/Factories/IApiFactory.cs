@@ -14,6 +14,6 @@ namespace Infura.io.Factories
         /// </summary>
         /// <param name="endpoint">The Infura.io endpoint.</param>
         /// <returns><see cref = "IInfuraApi"/></returns >
-        IInfuraApi Create(string endpoint);
+        IInfuraApi Create([NotNull] string endpoint);
     }
 }
